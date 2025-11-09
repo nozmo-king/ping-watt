@@ -159,7 +159,7 @@ class NetworkGraph {
         const descDiv = document.getElementById('detail-description');
         const connDiv = document.getElementById('detail-connections');
         
-        titleDiv.textContent = node.label.replace('\n', ' ');
+        titleDiv.textContent = node.label.replace(/\n/g, ' ');
         
         const descriptions = {
             'dd': 'An exploration of digital consciousness and virtual landscapes.',
@@ -185,7 +185,7 @@ class NetworkGraph {
             .map(e => {
                 const connectedId = e.from === node.id ? e.to : e.from;
                 const connectedNode = this.nodes.find(n => n.id === connectedId);
-                return connectedNode ? connectedNode.label.replace('\n', ' ') : '';
+                return connectedNode ? connectedNode.label.replace(/\n/g, ' ') : '';
             });
         
         connDiv.innerHTML = connections.length > 0
