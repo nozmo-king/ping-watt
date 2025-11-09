@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIXEL POETRY - PINGWATT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">PINGWATT</a>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="graph.html" class="nav-link">GRAPH</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">WORKS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="exhibition1.html">DIGITAL DREAMS</a></li>
+                        <li><a href="exhibition2.html">STATIC MEMORIES</a></li>
+                        <li><a href="exhibition3.html">PIXEL POETRY</a></li>
+                        <li><a href="exhibition4.html">TERMINAL VISIONS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1 class="outline-text">PIXEL POETRY</h1>
+            <p class="subtitle">EXHIBITION 03 / 2024</p>
+        </section>
+
+        <section class="intro">
+            <p class="large-text">Code as verse.</p>
+            <p class="small-text">Programming languages have grammar, syntax, rhythm. They can be beautiful. This exhibition treats code as literature, algorithms as stanzas, functions as metaphors.</p>
+        </section>
+
+        <section class="intro">
+            <h2 class="outline-text">FEATURED PIECES</h2>
+            
+            <div style="margin-top: 2rem;">
+                <h3 class="outline-text">001 / RECURSIVE HAIKU</h3>
+                <p class="small-text">A poem that calls itself. Each execution adds a new layer of meaning. The code IS the poem, the output is commentary.</p>
+                <div style="margin-top: 1rem; padding: 2rem; border: 1px solid #ffffff; background: #000; color: #fff; font-family: 'Courier New', monospace; font-size: 0.8rem; text-align: left;">
+<pre class="small-text">function haiku(depth = 0) {
+  if (depth > 5) return "silence";
+  
+  return `
+    pixels on screen ${depth}
+    meaning emerges from void
+    ${haiku(depth + 1)}
+  `;
+}</pre>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 class="outline-text">002 / VARIABLE SONNETS</h3>
+                <p class="small-text">Fourteen lines of JavaScript. Each variable declaration is a verse. The execution is the performance. Reading is compiling.</p>
+                <div style="margin-top: 1rem; padding: 4rem; border: 1px solid #ffffff; text-align: center;">
+                    <p class="outline-text">[INTERACTIVE PIECE PLACEHOLDER]</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <h3 class="outline-text">003 / INFINITE LOOP MEDITATION</h3>
+                <p class="small-text">A while loop that never ends, generating contemplative phrases. The bug is the feature. The crash is the punchline.</p>
+                <div style="margin-top: 1rem; padding: 4rem; border: 1px solid #ffffff; text-align: center;">
+                    <p class="outline-text">[INTERACTIVE PIECE PLACEHOLDER]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2 class="outline-text">STATEMENT</h2>
+            <p class="small-text">Why do we separate art from code? Both are forms of expression, both require creativity and craft. A well-written function can be as elegant as a well-written poem.</p>
+            <p class="small-text">Pixel Poetry challenges the artificial divide between technical and artistic work. It asks programmers to see beauty in their craft and poets to see structure in their art.</p>
+        </section>
+
+        <section class="intro">
+            <h2 class="outline-text">READING LIST</h2>
+            <ul style="list-style: none; padding: 1rem 0;">
+                <li class="small-text">→ "Code as Creative Medium" - Golan Levin</li>
+                <li class="small-text">→ "10 PRINT CHR$(205.5+RND(1)); : GOTO 10"</li>
+                <li class="small-text">→ "The Art of Computer Programming" - Donald Knuth</li>
+                <li class="small-text">→ "Beautiful Code" - Andy Oram & Greg Wilson</li>
+            </ul>
+        </section>
+
+        <div style="margin-top: 3rem; text-align: center; display: flex; justify-content: space-between; gap: 2rem;">
+            <a href="exhibition2.html" class="work-item outline-text" style="flex: 1;">← PREV: STATIC MEMORIES</a>
+            <a href="exhibition4.html" class="work-item outline-text" style="flex: 1;">NEXT: TERMINAL VISIONS →</a>
+        </div>
+    </main>
+
+    <footer class="small-text">
+        <p>&copy; 2024 PINGWATT. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="easter-eggs.js"></script>
+</body>
+</html>

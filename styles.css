@@ -1,0 +1,361 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Text Size Variations */
+.small-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+}
+
+.large-text {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+/* Black on Black with White Border Effect */
+.outline-text {
+    color: #000000;
+    text-shadow: 
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff,
+        0 0 0 #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #000000;
+    border-bottom: 1px solid #ffffff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    color: #000000;
+    text-shadow: 
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav-link:hover {
+    color: #000000;
+    text-shadow: 
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    border: 1px solid #ffffff;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    list-style: none;
+    min-width: 200px;
+    padding: 0.5rem 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: glitch 3s infinite;
+}
+
+.subtitle {
+    font-size: 1rem;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+/* Intro Section */
+.intro {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border: 1px solid #ffffff;
+}
+
+.intro p {
+    margin-bottom: 1rem;
+}
+
+/* Featured Works */
+.featured {
+    margin-bottom: 4rem;
+}
+
+.featured h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.work-item {
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.work-item:hover {
+    background-color: #ffffff;
+    color: #000000;
+    text-shadow: none;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #ffffff;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* CSS Easter Eggs */
+
+/* Easter Egg 1: Konami Code Effect (visual marker) */
+body.konami {
+    animation: rainbow-bg 2s infinite;
+}
+
+@keyframes rainbow-bg {
+    0% { background-color: #000000; }
+    20% { background-color: #1a1a1a; }
+    40% { background-color: #000000; }
+    60% { background-color: #1a1a1a; }
+    80% { background-color: #000000; }
+    100% { background-color: #000000; }
+}
+
+/* Easter Egg 2: Glitch Effect on Hover */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Easter Egg 3: Matrix Rain on Double Click */
+body.matrix::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 0, 0.1) 2px,
+        rgba(0, 255, 0, 0.1) 4px
+    );
+    animation: matrix-rain 20s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes matrix-rain {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* Easter Egg 4: Inverted Colors on Triple Click */
+body.inverted {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.inverted .navbar,
+body.inverted .nav-link,
+body.inverted .logo,
+body.inverted footer {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+body.inverted .outline-text {
+    color: #ffffff;
+    text-shadow: 
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+/* Easter Egg 5: Cursor Effects */
+body.cursor-trail {
+    cursor: crosshair;
+}
+
+/* Easter Egg 6: Hidden ASCII Art */
+.ascii-art {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: pre;
+    font-size: 0.5rem;
+    z-index: 10000;
+    background-color: #000000;
+    padding: 2rem;
+    border: 1px solid #ffffff;
+}
+
+body.show-ascii .ascii-art {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .large-text {
+        font-size: 1.5rem;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-left: 1px solid #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border: 1px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #cccccc;
+}

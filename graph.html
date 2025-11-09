@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAPH - PINGWATT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #graph-canvas {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ffffff;
+            background: #000000;
+            cursor: grab;
+        }
+
+        #graph-canvas:active {
+            cursor: grabbing;
+        }
+
+        .graph-info {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #ffffff;
+        }
+
+        .node-details {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border: 1px solid #ffffff;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .legend {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">PINGWATT</a>
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="graph.html" class="nav-link">GRAPH</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">WORKS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="exhibition1.html">DIGITAL DREAMS</a></li>
+                        <li><a href="exhibition2.html">STATIC MEMORIES</a></li>
+                        <li><a href="exhibition3.html">PIXEL POETRY</a></li>
+                        <li><a href="exhibition4.html">TERMINAL VISIONS</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h1 class="outline-text">GRAPH</h1>
+            <p class="subtitle">AN EVER-GROWING NETWORK OF IDEAS</p>
+        </section>
+
+        <section class="intro">
+            <p class="small-text">This graph visualizes the conceptual relationships between works, themes, and ideas. Click and drag to explore. Hover over nodes for details. The network grows with each new piece.</p>
+        </section>
+
+        <section>
+            <canvas id="graph-canvas"></canvas>
+            
+            <div class="graph-info small-text">
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: #ffffff;"></div>
+                        <span>EXHIBITIONS</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: transparent;"></div>
+                        <span>THEMES</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: #ffffff; opacity: 0.5;"></div>
+                        <span>CONCEPTS</span>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 1rem;">NODES: <span id="node-count">0</span> | CONNECTIONS: <span id="connection-count">0</span></p>
+            </div>
+
+            <div id="node-details" class="node-details">
+                <h3 class="outline-text" id="detail-title">NODE DETAILS</h3>
+                <p id="detail-description" class="small-text"></p>
+                <div id="detail-connections"></div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2 class="outline-text">ABOUT THE GRAPH</h2>
+            <p class="small-text">Inspired by Obsidian's knowledge graph, this visualization represents the interconnected nature of creative work. Each node is a concept, work, or theme. Lines represent relationships, influences, and connections.</p>
+            <p class="small-text">The graph is alive—it grows as new works are added, forming an organic map of artistic evolution. Some connections are obvious, others hidden. Exploration reveals the deeper structure.</p>
+        </section>
+    </main>
+
+    <footer class="small-text">
+        <p>&copy; 2024 PINGWATT. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script src="graph.js"></script>
+    <script src="easter-eggs.js"></script>
+</body>
+</html>
